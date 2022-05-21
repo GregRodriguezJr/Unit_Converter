@@ -14,29 +14,37 @@
     <div class="card">
         <header class="header">
             <h1>Imperial to Metric Conversion</h1>
-            <input type="text" placeholder="Enter number...">
-            <button>Enter</button>
+            <input id="toMetricNum" type="number" step="0.01" placeholder="Enter number..">
+            <button id="toMetricBtn">Enter</button>
         </header>
         <div class="text-box">
-            <h3>Mass</h3>
-            <p></p>
-            <h3>Volume</h3>
-            <p></p>
-            <h3>Length</h3>
+            <div id="metricResults"></div>
+            <div class="metric-default">
+                <h3>Mass</h3>
+                <p>0</p>
+                <h3>Volume</h3>
+                <p>0</p>
+                <h3>Length</h3>
+                <p>0</p>
+            </div>
         </div>
     </div>
     <div class="card">
         <header class="header">
             <h1>Metric to Imperial Conversion</h1>
-            <input type="text" placeholder="Enter number...">
-            <button>Enter</button>
+            <input id="toImpNum" type="number" step="0.01" placeholder="Enter number..">
+            <button id="toImpBtn">Enter</button>
         </header>
         <div class="text-box">
-            <h3>Mass</h3>
-            <p></p>
-            <h3>Volume</h3>
-            <p></p>
-            <h3>Length</h3>
+            <div id="impResults"></div>
+            <div class="imp-default">
+                <h3>Mass</h3>
+                <p>0</p>
+                <h3>Volume</h3>
+                <p>0</p>
+                <h3>Length</h3>
+                <p>0</p>
+            </div>
         </div>
     </div>
     <script src="scripts.js"></script>

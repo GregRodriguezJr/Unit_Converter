@@ -13,34 +13,73 @@ body {
     background: -webkit-linear-gradient(top left, #D41DF2, #7688DC);
     background: -moz-linear-gradient(top left, #D41DF2, #7688DC);
     background: linear-gradient(to bottom right, #D41DF2, #7688DC);
-    padding: 1em;
+    padding: 1.5em 1em;
     text-align: center;
+    border-radius: 1em 1em 0 0;
 }
 
 .card {
-    border: solid white;
     max-width: 600px;
-    margin: 4em auto;
-    border-radius: .5em;
+    margin: 1em auto;
+    text-align: center;
 }
 
 .text-box {
     background: #1F2937;
     padding: 1em;
+    border-radius: 0 0 1em 1em;
 }
 
 h1 {
     margin-top: 0;
 }
 
+h3 {
+    margin: 0;
+}
+
+p {
+    color: #D2D2D2;
+    margin: .5em;
+}
+
 input {
-    padding: .25em;
+    padding: .25em .5em;
     border-radius: .5em;
     border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    max-width: 30%;
 }
 
 button {
-    border-radius: .5em;
-    border: none;
-    padding: .25em .5em;
+    border-radius: .75em;
+    border: solid #fff .12em;
+    color: #fff;
+    padding: .25em .65em;
+    margin: 1em 0;
+    font-size: .95rem;
+    background: transparent;
+    transition: all 0.2s;
+    letter-spacing: .05em;
+}
+
+button:hover {
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media(max-width: 800px) {
+    h1 {
+        font-size: 1.25rem;
+    }
 }
