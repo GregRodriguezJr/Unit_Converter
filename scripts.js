@@ -1,14 +1,21 @@
 // button event listeners
-document.getElementById("toMetricBtn").addEventListener('click', toMetricInput);
+document.getElementById("toMetricBtn").addEventListener('click',() => {
+    userInput("toMetricBtn");
+});
 
-// functions for imperial to metric
-function toMetricInput() {
-    let metricDefault = document.getElementById("metricDefault");
+document.getElementById("toImpBtn").addEventListener('click',() => {
+    userInput("toImpBtn");
+})
+
+// functions for user input
+function userInput(btn) {
+    const metricDefault = document.getElementById("metricDefault");
     let toMetricNum = document.getElementById("toMetricNum").value;
-    //check for empty field and call display function
-    if(toMetricNum === "" ) {
-        alert("Input field blank, please enter a number.")
-    } else {
+
+    let toImpNum = document.getElementById("toImpNum").value;
+    const impDefault = document.getElementById("impDefault");
+
+    if(btn === "toMetricBtn") {
         displayToMetric(toMetricNum);
         document.getElementById("toMetricNum").value = "";
         metricDefault.classList.add('hide');
@@ -16,6 +23,7 @@ function toMetricInput() {
 }
 
 function displayToMetric(number) {
+    //variables for formulas
     const massNum = number / 2.205;
     const volNum = number * 3.785;
     const lengthNum = number / 3.281;
