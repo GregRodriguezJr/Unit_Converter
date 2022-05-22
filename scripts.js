@@ -46,3 +46,17 @@ function displayToMetric(number) {
         <p>${number} feet = ${lengthNum.toFixed(2)} meters</p>
     `
 }
+
+function displayToImp(number) {
+    const massNum = number * 2.205;
+    const volNum = number / 3.785;
+    const lengthNum = number * 3.281;
+    document.getElementById('impResults').innerHTML = `
+        <h3>Mass</h3>
+        <p>${number} kilos = ${massNum.toFixed(2)} pounds</p>
+        <h3>Volume</h3>
+        <p>${number} liters = ${volNum.toFixed(2)} gallons</p>
+        <h3>Length</h3>
+        <p>${number} meters = ${lengthNum.toFixed(2)} feet</p>
+    `
+}
