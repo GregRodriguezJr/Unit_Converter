@@ -7,7 +7,7 @@ document.getElementById("toImpBtn").addEventListener('click',() => {
     userInput("toImpBtn");
 })
 
-// functions for user input
+// function for user input
 function userInput(btn) {
     const metricDefault = document.getElementById("metricDefault");
     let toMetricNum = document.getElementById("toMetricNum").value;
@@ -15,10 +15,19 @@ function userInput(btn) {
     let toImpNum = document.getElementById("toImpNum").value;
     const impDefault = document.getElementById("impDefault");
 
-    if(btn === "toMetricBtn") {
+    if(btn === "toMetricBtn") { 
+        //pass input number to function
         displayToMetric(toMetricNum);
+        //clear out input field
         document.getElementById("toMetricNum").value = "";
+        //display none to default unit values
         metricDefault.classList.add('hide');
+    }
+
+    if(btn === "toImpBtn") {
+        displayToImp(toImpNum);
+        document.getElementById("toImpNum").value = "";
+        impDefault.classList.add('hide');
     }
 }
 
@@ -37,5 +46,3 @@ function displayToMetric(number) {
         <p>${number} feet = ${lengthNum.toFixed(2)} meters</p>
     `
 }
-
-// functions for metric to imperial
